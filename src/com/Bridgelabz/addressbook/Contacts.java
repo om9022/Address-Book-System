@@ -38,7 +38,7 @@ public class Contacts {
 		return city;
 	}
 	
-	public void getCity(String city) {
+	public void setCity(String city) {
 		this.city = city;
 	}
 	
