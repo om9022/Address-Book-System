@@ -54,10 +54,6 @@ public class AddressBookManager {
 		addContact(contact);
 	}
 
-	void removeItem(Contacts address) {
-		addressBookList.remove(address);
-	}
-
 	public void removeContactDetails() {
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Enter a Contact name");

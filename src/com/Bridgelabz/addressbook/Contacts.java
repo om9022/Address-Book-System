@@ -1,5 +1,7 @@
 package com.Bridgelabz.addressbook;
 
+import java.util.Objects;
+
 public class Contacts {
 	private String firstName;
 	private String lastName;
@@ -78,5 +80,23 @@ public class Contacts {
 				",Enter address: "+ address + ", Enter city: "+ city + ", Enter state: "+ state + ", Enter email id: "+ email +
 				", Enter zip: "+ zip + ", Enter Phone Number: "+ phoneNumber ;
 		
+	}
+	
+	public int hashcode() {
+		return Objects.hash(firstName, lastName, address, city, state, email, zip, phoneNumber);
+	}
+	
+	public boolean equals(Object obj) {
+		if(this == obj)
+		return true;
+		if(obj == null)
+			return false;
+		if(getClass() != obj.getClass())
+			return false;
+		Contacts other = (Contacts) obj;
+		return Objects.equals(address, other.address) && Objects.equals(city, other.city)
+				&& Objects.equals(email, other.email) && Objects.equals(firstName, other.firstName)
+				&& Objects.equals(lastName, other.lastName) && phoneNumber == other.phoneNumber
+				&& Objects.equals(state, other.state) && zip == other.zip;
 	}
 }
